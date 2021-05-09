@@ -1,0 +1,59 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  Práctica 11
+    
+  @author Pablo Bande Sanchez Giron
+  @since 29.apr.2021
+  @description chess html
+  @see {@link https://github.com/PAI-ULL/pai-p11-ajedrez-alu0101225296.git}
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Chess</title>
+      <link rel="stylesheet" href="pablo-bande-chess.css">
+      <script type="module" defer src="chess.js"></script>
+  </head>
+  <body >
+    <header>
+      <a class="bar" href="https://lichess.org/">lichess.org</a>
+      <span></span>
+      <a class="subbar" href="https://lichess.org/">JUGAR</a>
+      <span></span>
+      <a class="subbar" href="https://lichess.org/practice">APRENDER</a>
+      <span></span>
+      <a class="subbar" href="https://lichess.org/tv">OBSERVAR</a>
+      <span></span>
+      <a class="subbar" href="https://lichess.org/player">COMUNIDAD</a>
+      <span></span>
+      <a class="subbar" href="https://lichess.org/analysis">HERRAMIENTAS</a>
+      <div class="description">  
+      </div>
+      <div class="home">
+        <a id="home" href="index.html">Home</a>
+      </div>
+    </header>
+    <div class="content">
+      <canvas id="CANVAS"></canvas>
+      <aside>
+        <h2>Chess Game<br></h2>
+        <button class="start" id="start">Partida de ajedrez</button>
+        <button class="solve" id="solve">Generar solución</button>
+        <br><br>
+        <label id="coords" class="coords"></label><br><br><br><br>
+      </aside>
+    </div>
+    <div class="footer">
+      <div style="float:left; margin-left:2em;">
+        <p style="font-weight: 800;">Universidad de La Laguna</p>
+        <p>Grado en Ingeniería Informática - Programación de Aplicaciones Interactivas</p>
+      </div>
+      <a href="https://www.ull.es/"><img style="float: right;" width="50" height="50" alt="ullLogo" src="img/ull.jpg" /></a>
+    </div>    
+  </body>
+</html>

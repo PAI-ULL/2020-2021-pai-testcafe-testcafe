@@ -1,0 +1,48 @@
+{
+  "name": "pai-practica11-chess-alu0101225296",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/chess.js",
+  "type": "module",
+  "scripts": {
+    "jsdoc": "jsdoc -p -R README.md -c /home/usuario/practicas/pai-p11-ajedrez-alu0101225296/conf.json",
+    "start": "node src/web-server/app.js",
+    "test": "c8 mocha",
+    "report": "c8 --reporter=json npm test",
+    "validate": "cat codecov.yml | curl --data-binary @- https://codecov.io/validate",
+    "codecov": "curl -f ./coverage/coverage-final.json -s https://codecov.io/bash | bash",
+    "test-cafe": "npx testcafe chrome test/*.js",
+    "test-cafe-visual:actual": "npx testcafe chrome test/chessTestCafe.js -s src/img --take-snapshot actual",
+    "test-cafe-visual:base": "npx testcafe chrome test/chessTestCafe.js -s src/img --take-snapshot base"
+  },
+  "keywords": [
+    "PAI",
+    "ULL",
+    "JavaScript"
+  ],
+  "author": "Pablo Bande Sanchez Giron",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-plugin": "^7.13.16",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-private-methods": "^7.13.0",
+    "better-docs": "^2.3.2",
+    "c8": "^7.7.0",
+    "canvas": "^2.7.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.25.0",
+    "eslint-config-google": "^0.14.0",
+    "express": "^4.17.1",
+    "jsdom": "^16.5.3",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "testcafe": "^1.14.0",
+    "testcafe-blink-diff": "^0.4.8"
+  },
+  "dependencies": {
+    "clean-jsdoc-theme": "^3.2.4",
+    "jsdom-global": "^3.0.2"
+  }
+}

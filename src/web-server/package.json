@@ -1,0 +1,13 @@
+{
+  "name": "pai-practica11-chess-pablo-bande-web-server",
+  "version": "1.0.0",
+  "description": "Testing Web Server",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Pablo Bande Sanchez Girón",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
