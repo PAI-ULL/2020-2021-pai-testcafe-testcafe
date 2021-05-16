@@ -11,7 +11,8 @@
     "report": "c8 --reporter=json npm test",
     "validate": "cat codecov.yml | curl --data-binary @- https://codecov.io/validate",
     "codecov": "curl -f ./coverage/coverage-final.json -s https://codecov.io/bash | bash",
-    "test-cafe": "npx testcafe chrome test/*.js",
+    "test-cafe": "npx testcafe chrome:headless tests/test-cafe.js",
+    "simple-testcafe": "npx testcafe all tests/simple-testcafe-test.js -s takeOnFails=true",
     "test-cafe-visual:actual": "npx testcafe chrome test/chessTestCafe.js -s src/img --take-snapshot actual",
     "test-cafe-visual:base": "npx testcafe chrome test/chessTestCafe.js -s src/img --take-snapshot base"
   },

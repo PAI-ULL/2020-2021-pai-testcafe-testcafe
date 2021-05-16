@@ -1,3 +1,16 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Programación de Aplicaciones Interactivas
+ * Práctica 11
+ *
+ * @author Pablo Bande Sanchez Giron
+ * @since 02.may.2021
+ * @description Tests for chess class.
+ * @see {@link https://github.com/PAI-ULL/pai-p11-ajedrez-alu0101225296.git}
+ */
+
 import { Selector, ClientFunction } from 'testcafe'; // first import testcafe selectors
 
 fixture('Index behaviour')
@@ -59,3 +72,43 @@ fixture('Checking solution interface')
       .click('#start')
       .expect(Selector('#coords').visible).notOk();
   });
+
+  fixture('Simple test')
+  .page('https://www.google.com/');
+
+  test('Checking some text elements on the WebPage', async signal => {
+    await signal
+      .typeText(Selector('[name="q"]'), 'testcafe')
+      .wait(3000)
+      .pressKey('enter')
+      .wait(3000);
+  });
+
+  test('Other option but pressing Search button', async signal => {
+    await signal
+      .typeText(Selector('[name="q"]'), 'testcafe')
+      .takeScreenshot()
+      .click(Selector('[name="btnK"]'))
+  });
+
+fixture('Reading text of an element')
+  .page('https://es.wikipedia.org/wiki/Elon_Musk');
+
+  test('Reading text of an element', async signal => {
+    const TITLE = await Selector('#firstHeading').textContent;
+    await signal
+      .expect(TITLE).eql('Elon Musk');
+  });
+
+fixture ('Screenshots')
+  .page `http://devexpress.github.io/testcafe/example/`;
+
+test('Take a screenshot of a fieldset', async signal => {
+  await signal
+    .typeText('#developer-name', 'Peter Parker')
+    .click('#tried-test-cafe')
+    .typeText('#comments', 'I think TestCafe is awesome!')
+    .takeElementScreenshot('#comments')
+    .click('#submit-button')
+    .takeScreenshot();
+});
