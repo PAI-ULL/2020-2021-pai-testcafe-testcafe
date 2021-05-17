@@ -6,9 +6,9 @@ fixture('Simple test')
   test('Checking some text elements on the WebPage', async signal => {
     await signal
       .typeText(Selector('[name="q"]'), 'testcafe')
-      .wait(3000)
+      .wait(1000)
       .pressKey('enter')
-      .wait(3000);
+      .wait(1000);
   });
 
   test('Other option but pressing Search button', async signal => {

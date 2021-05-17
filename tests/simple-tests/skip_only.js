@@ -21,7 +21,7 @@ fixture.only `My fixture`
 test('My fixture - Test', () => {});
 
 
-fixture.skip `My Fixture 2`;
+fixture `My Fixture 2`;
 
 test.skip('My fixture 2 - Test 1', () => {});
 test.only('My fixture 2 - Test 2', () => {});
